@@ -1,0 +1,31 @@
+.container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #630c0c;
+  color: #fcfbfa;
+  padding:0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+
+}
+
+h1{
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(245, 248, 248);
+    margin-top: 10px;
+    
+}
+
+.logo{
+  width: 40px;
+  height: auto;
+  margin-left: 50px;
+
+  
+}
