@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,12 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="header">
             <h1>PEITA STORE</h1>
             <input type="text" class="search-bar" placeholder="o que você procura?">
-        <p> <b> Contato</b></p>
-        <p> <b>Sobre a Loja </b></p>
+            <p><b>Contato</b></p>
+            <p><b>Sobre a Loja</b></p>
         </div>
     </div>
 
@@ -26,12 +25,11 @@
         <div class="banner-content">
             <span class="banner-tag">Oferta Especial</span>
             <p class="banner-title">CARTÃO PRESENTE PEITA STORE</p>
-            <h2 class="banner-subtitle">Acerte no presente do mozão </h2>
+            <h2 class="banner-subtitle">Acerte no presente do mozão</h2>
             <div class="discount-badge">ATÉ 60% OFF + 10% NO PIX</div>
-            <a href="#" class="cta-button">Comprar Agora</a>
+            <button class="cta-button" id="buyGiftCard">Comprar Agora</button>
         </div>
     </div>
-
 
     <section class="products-section">
         <h2 class="section-title">NOSSA EDIÇÃO</h2>
@@ -39,19 +37,19 @@
         <div class="product-grid">
             <div class="product-card">
                 <img src="https://www.esportesdp.com.br/static/app/noticia_157970175445/2025/01/08/22659/20250108144944187421e.jpeg"
-                    alt="Dupla de Ouro" class="product-image">
+                    alt="Seleções" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Seleções</h3>
-                    <div class="product-price">Comprar</div>
+                    <button class="compact-buy-button" data-product="Seleções" data-price="199.90">Comprar</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <img
-                    src="https://images.seeklogo.com/logo-png/53/2/identidade-brasileirao-logo-png_seeklogo-531483.png">
+                <img src="https://images.seeklogo.com/logo-png/53/2/identidade-brasileirao-logo-png_seeklogo-531483.png"
+                    alt="Times Brasileirão" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Times Brasileirão</h3>
-                    <div class="product-price">Comprar</div>
+                    <button class="compact-buy-button" data-product="Times Brasileirão" data-price="179.90">Comprar</button>
                 </div>
             </div>
 
@@ -60,24 +58,29 @@
                     alt="Times Premier League" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Times Premier League</h3>
-                    <div class="product-price">Comprar</div>
+                    <button class="compact-buy-button" data-product="Times Premier League" data-price="249.90">Comprar</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="https://images.seeklogo.com/logo-png/61/1/la-liga-logo-png_seeklogo-614181.png"
                     alt="Times La Liga" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Times La Liga</h3>
-                    <div class="product-price">Comprar</div>
-                </div>
-
+                    <button class="compact-buy-button" data-product="Times La Liga" data-price="229.90">Comprar</button>
                 </div>
             </div>
 
+            <div class="product-card">
+                <img src="data:image/png;base64,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"
+                    alt="Times Serie A" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Times Serie A</h3>
+                    <button class="compact-buy-button" data-product="Times Serie A" data-price="219.90">Comprar</button>
+                </div>
+            </div>
         </div>
     </section>
-
-
 
     <section class="carousel-section">
         <div class="carousel-container">
@@ -98,21 +101,10 @@
                     <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/36bf7aa6c3d44a53abd95321a7a588cd_9366/Camisa_2_Orlando_City_24-25_Roxo_HZ6207.jpg"
                         alt="Produto 4">
                 </div>
-                <div class="carousel-item">
-                    <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2024-07/Camisa-titular-do-Liverpool-2024-2025-Nike-3.jpg.webp"
-                        alt="Produto 5">
-                </div>
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
-
-</html>
-
-
-
-
-
-</body>
-
 </html>
