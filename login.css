@@ -73,6 +73,12 @@ body * {
     margin-bottom: 10px;
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 .btn-login {
     width: 100%;
     padding: 16px 0;
@@ -86,6 +92,12 @@ body * {
     color: rgb(0, 0, 0);
     background: #ffcc00;
     cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.btn-login:hover {
+     background-color: #edbe01;
+     transform: scale(1.05);
 }
 
 h4 a {
