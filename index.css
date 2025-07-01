@@ -117,6 +117,18 @@ h1 {
     margin-bottom: 2rem;
     box-shadow: 0 4px 4px rgba(0,0,0,0.3);
     width: 300px;
+    animation: pulse 2s infinite;
+}
+
+.discount-badge:hover {
+    background-color: #edbe01;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
 }
 
 .cta-button {
@@ -133,6 +145,7 @@ h1 {
     max-width: 250px;
     text-align: center;
     text-decoration: none;
+    animation: pulse 2s infinite;
 }
 
 .cta-button:hover {
